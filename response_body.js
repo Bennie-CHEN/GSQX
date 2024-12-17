@@ -1,5 +1,5 @@
 // 获取请求体
-let reqBody = $request;
+let reqBody = $request.scheme;
 console.log("Request body: ", reqBody);  // 输出请求体内容
 
 // // 定义要匹配的请求体

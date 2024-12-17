@@ -21,7 +21,7 @@
     // 获取响应体
     let body = $response.body;
     let obj = JSON.parse(body); // 将响应体解析为JSON对象
-    // console.log("$response body: ", body);  // 输出请求体内容
+    console.log("$response body: ", body);  // 输出请求体内容
     
     // 如果请求体匹配，则修改响应体的内容
     obj.data = 

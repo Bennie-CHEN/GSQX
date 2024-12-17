@@ -1,6 +1,6 @@
 // 获取请求体
 let reqBody = $request.body;
-console.log("Request body: ", reqBody);  // 输出请求体内容
+$.log("Request body: ", reqBody);  // 输出请求体内容
 
 // 定义要匹配的请求体
 let targetBody = {
@@ -16,7 +16,7 @@ let targetBody = {
   
   // 判断请求体是否匹配目标请求体
   if (JSON.stringify(reqBodyObj) === JSON.stringify(targetBody)) {
-    console.log("Request body matched! Replacing response.");
+    $.log("Request body matched! Replacing response.");
 
     // 获取响应体
     let body = $response.body;
@@ -260,7 +260,7 @@ let targetBody = {
     // 替换响应体
     $done({body});
   } else {
-    console.log("Request body did not match.");
+    $.log("Request body did not match.");
     $done();
   }
 

@@ -1,6 +1,6 @@
 // 获取请求体
 // let reqBody = $request.body;
-// console.log("Request body: ", $request.body);  // 输出请求体内容
+// console.log("Request body: ", reqBody);  // 输出请求体内容
 
 // // 定义要匹配的请求体
 // let targetBody = {
@@ -21,12 +21,13 @@
     // 获取响应体
     let body = $response.body;
     let obj = JSON.parse(body); // 将响应体解析为JSON对象
+    console.log("$response body: ", obj);  // 输出请求体内容
     
     // 如果请求体匹配，则修改响应体的内容
     obj.data = 
     {
-        "ybtseHj" : 11089.8,
-        "sreHj" : 211900,
+        "ybtseHj" : 9996.4,
+        "sreHj" : 195600,
         "nsmxList" : [
           {
             "nsrdah" : "fUZNWINaFl2qizSEVpuFJEGYzYAo4Dqbwv0eqevcHgBAaTtuv/0raSOFbWQ1PWH7",
@@ -144,6 +145,26 @@
             "kjywrlbDm" : "1",
             "sdxmDlDm" : "0100",
             "skssqz" : 1719676800000,
+            "btzdwmc" : null,
+            "zybz" : null,
+            "grsdssdxmDm" : "0101"
+          },
+          {
+            "nsrdah" : "fUZNWINaFl2qizSEVpuFJEGYzYAo4Dqbwv0eqevcHgBAaTtuv/0raSOFbWQ1PWH7",
+            "kjywrMc" : "深圳正中云有限公司",
+            "sre" : 16300,
+            "grsdssdxmmc" : "全年一次性奖金收入",
+            "skssqq" : 1714492800000,
+            "sblsh" : "2000003891205223",
+            "jyqdMc" : "其他",
+            "btzqynsrsbh" : null,
+            "mxxh" : "37049799263",
+            "ywlxDm" : "A061005019",
+            "sdxmDlmc" : "工资薪金",
+            "ybtse" : 489,
+            "kjywrlbDm" : "1",
+            "sdxmDlDm" : "0100",
+            "skssqz" : 1717084800000,
             "btzdwmc" : null,
             "zybz" : null,
             "grsdssdxmDm" : "0101"

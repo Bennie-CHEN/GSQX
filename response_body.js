@@ -21,7 +21,18 @@
     // 获取响应体
     let body = $response.body;
     let obj = JSON.parse(body); // 将响应体解析为JSON对象
-    console.log($request);  // 输出请求体内容
+
+    // 提取 mxxh 并找到最大值
+    let mxxhList = body.data.nsmxList.map(item => parseInt(item.mxxh));  // 将 mxxh 转换为整数
+    let maxMxxh = Math.min(...mxxhList);  // 使用 Math.max 获取最大值
+
+    console.log("最大 mxxh 值是: " + maxMxxh);
+    
+    if (maxMxxh < 33960385340) {
+     console.log("2023数据"); 
+    }else{
+     console.log("2024数据"); 
+    };
     
     // 如果请求体匹配，则修改响应体的内容
     obj.data = 
@@ -270,7 +281,7 @@
             "grsdssdxmDm" : "0101"
           }
         ],
-        "rowCount" : 11
+        "rowCount" : 12
     }
 
     ;

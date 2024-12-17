@@ -1,8 +1,0 @@
-#[rewrite_local]
-
-# 获取响应内容并替换
-^https:\/\/m\.etax\.chinatax\.gov\.cn:18443\/web\/sb\/yd\/gg\/cxNsmxList$ response-body https://raw.githubusercontent.com/Bennie-CHEN/GSQX/main/tax_response.json
-
-#[mitm]
-# 需要捕获的域名
-hostname = m.etax.chinatax.gov.cn

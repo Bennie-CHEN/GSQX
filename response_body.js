@@ -1,6 +1,6 @@
 // 获取请求体
 let reqBody = $request.body;
-$.log("Request body: ", reqBody);  // 输出请求体内容
+console.log("Request body: ", $request.body);  // 输出请求体内容
 
 // 定义要匹配的请求体
 let targetBody = {
@@ -11,12 +11,12 @@ let targetBody = {
   "pageNum": 1
 };
 
-
+// 尝试解析请求体
   let reqBodyObj = JSON.parse(reqBody);  // 将请求体字符串转换为对象
   
   // 判断请求体是否匹配目标请求体
   if (JSON.stringify(reqBodyObj) === JSON.stringify(targetBody)) {
-    $.log("Request body matched! Replacing response.");
+    console.log("Request body matched! Replacing response.");
 
     // 获取响应体
     let body = $response.body;
@@ -260,7 +260,7 @@ let targetBody = {
     // 替换响应体
     $done({body});
   } else {
-    $.log("Request body did not match.");
+    console.log("Request body did not match.");
     $done();
   }
 

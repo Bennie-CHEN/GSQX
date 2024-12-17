@@ -1,6 +1,4 @@
 #[rewrite_local]
-# 匹配请求URL和请求体的规则
-# ^https:\/\/m\.etax\.chinatax\.gov\.cn:18443\/web\/sb\/yd\/gg\/cxNsmxList$ url request-body {"sdnd":"2024","sdxmDms":["0100","0400","0500","0600"],"pageSize":"500","includeJysdFlsd":false,"pageNum":1}
 
 # 获取响应内容并替换
 ^https:\/\/m\.etax\.chinatax\.gov\.cn:18443\/web\/sb\/yd\/gg\/cxNsmxList$ url-response body https://raw.githubusercontent.com/Bennie-CHEN/GSQX/main/tax_response.json

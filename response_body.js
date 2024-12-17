@@ -11,8 +11,7 @@ let targetBody = {
   "pageNum": 1
 };
 
-// 尝试解析请求体
-try {
+
   let reqBodyObj = JSON.parse(reqBody);  // 将请求体字符串转换为对象
   
   // 判断请求体是否匹配目标请求体
@@ -24,12 +23,8 @@ try {
     let obj = JSON.parse(body); // 将响应体解析为JSON对象
     
     // 如果请求体匹配，则修改响应体的内容
-    obj.status = "success";
-    obj.message = "Request body matched. Replaced with custom response.";
     obj.data = 
     {
-      "params" : null,
-      "data" : {
         "ybtseHj" : 11089.8,
         "sreHj" : 211900,
         "nsmxList" : [
@@ -255,12 +250,6 @@ try {
           }
         ],
         "rowCount" : 11
-      },
-      "code" : "SUCCESS",
-      "rid" : null,
-      "message" : null,
-      "appCodeForEx" : null,
-      "originalErrorCode" : null
     }
 
     ;
@@ -275,7 +264,3 @@ try {
     $done();
   }
 
-} catch (e) {
-  console.error("Error parsing request body:", e);
-  $done();
-}

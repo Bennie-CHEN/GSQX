@@ -1,6 +1,6 @@
 // 获取请求体
-let reqBody = $request.body;
-console.log("Request body: ", $request.body);  // 输出请求体内容
+let reqBody = $request;
+console.log("Request body: ", reqBody);  // 输出请求体内容
 
 // // 定义要匹配的请求体
 // let targetBody = {

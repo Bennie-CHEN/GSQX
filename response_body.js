@@ -1,3 +1,4 @@
+// 获取请求体
 let reqBody = $request.body;
 console.log("Request body: ", reqBody);  // 输出请求体内容
 
@@ -17,9 +18,15 @@ try {
   // 判断请求体是否匹配目标请求体
   if (JSON.stringify(reqBodyObj) === JSON.stringify(targetBody)) {
     console.log("Request body matched! Replacing response.");
+
+    // 获取响应体
+    let body = $response.body;
+    let obj = JSON.parse(body); // 将响应体解析为JSON对象
     
-    // 如果请求体匹配，替换响应体
-    $response.body = JSON.stringify(
+    // 如果请求体匹配，则修改响应体的内容
+    obj.status = "success";
+    obj.message = "Request body matched. Replaced with custom response.";
+    obj.data = 
     {
       "params" : null,
       "data" : {
@@ -255,14 +262,20 @@ try {
       "appCodeForEx" : null,
       "originalErrorCode" : null
     }
-    );
 
+    ;
+
+    // 将修改后的对象转换回JSON字符串
+    body = JSON.stringify(obj);
+
+    // 替换响应体
+    $done({body});
   } else {
     console.log("Request body did not match.");
+    $done();
   }
 
 } catch (e) {
   console.error("Error parsing request body:", e);
+  $done();
 }
-
-$done();

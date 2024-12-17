@@ -1,29 +1,9 @@
-// 获取请求体
-// let reqBody = $request.body;
-// console.log("Request body: ", reqBody);  // 输出请求体内容
-
-// // 定义要匹配的请求体
-// let targetBody = {
-//   "sdnd": "2024",
-//   "sdxmDms": ["0100", "0400", "0500", "0600"],
-//   "pageSize": "500",
-//   "includeJysdFlsd": false,
-//   "pageNum": 1
-// };
-
-// // 尝试解析请求体
-//   let reqBodyObj = JSON.parse(reqBody);  // 将请求体字符串转换为对象
-  
-//   // 判断请求体是否匹配目标请求体
-//   if (JSON.stringify(reqBodyObj) === JSON.stringify(targetBody)) {
-//     console.log("Request body matched! Replacing response.");
-
     // 获取响应体
     let body = $response.body;
     let obj = JSON.parse(body); // 将响应体解析为JSON对象
 
     // 提取 mxxh 并找到最大值
-    let mxxhList = body.data.nsmxList.map(item => parseInt(item.mxxh));  // 将 mxxh 转换为整数
+    let mxxhList = obj.data.nsmxList.map(item => parseInt(item.mxxh));  // 将 mxxh 转换为整数
     let maxMxxh = Math.min(...mxxhList);  // 使用 Math.max 获取最大值
 
     console.log("最大 mxxh 值是: " + maxMxxh);

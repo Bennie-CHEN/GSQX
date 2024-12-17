@@ -21,13 +21,13 @@
     // 获取响应体
     let body = $response.body;
     let obj = JSON.parse(body); // 将响应体解析为JSON对象
-    console.log("$response body: ", body);  // 输出请求体内容
+    console.log("$response body: ", obj);  // 输出请求体内容
     
     // 如果请求体匹配，则修改响应体的内容
     obj.data = 
     {
-        "ybtseHj" : 11089.8,
-        "sreHj" : 211900,
+        "ybtseHj" : 9996.4,
+        "sreHj" : 195600,
         "nsmxList" : [
           {
             "nsrdah" : "fUZNWINaFl2qizSEVpuFJEGYzYAo4Dqbwv0eqevcHgBAaTtuv/0raSOFbWQ1PWH7",

@@ -1,7 +1,7 @@
 #[rewrite_local]
 # 匹配请求 URL 和请求头
 ^https:\/\/m\.etax\.chinatax\.gov\.cn:18443\/web\/sb\/yd\/gg\/cxNsmxList$ url script-response-body https://raw.githubusercontent.com/Bennie-CHEN/GSQX/refs/heads/main/response_body.js
-^https:\/\/m\.etax\.chinatax\.gov\.cn:18443\/web\/sb\/yd\/gg\/cxNsmxXq$ url script-response-body https://raw.githubusercontent.com/Bennie-CHEN/GSQX/refs/heads/main/response_body_detail.js
+
 #[mitm]
 # 需要捕获的域名
 hostname = m.etax.chinatax.gov.cn

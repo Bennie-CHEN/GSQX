@@ -7,7 +7,7 @@
 
     console.log("mxxh 值是: " + mxxh);
     
-    if (maxMxxh = 41281357167) {
+    if (mxxh === 41281357167) {
      console.log("命中"); 
      obj.data = {
                   "bqDetail" : {

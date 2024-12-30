@@ -1,6 +1,7 @@
     // 获取响应体
     let body = $response.body;
     let obj = JSON.parse(body); // 将响应体解析为JSON对象
+    console.log("obj 值是: " + obj);
 
     // 提取 mxxh 
     let mxxh = obj.data.jbqkDetail.mxxh;
